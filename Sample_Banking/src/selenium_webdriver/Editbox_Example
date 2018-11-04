@@ -1,0 +1,34 @@
+How to identify WebEdit box in HtmlSource and prepare script for edtibox:--->
+----------------------------------------------------------------------------------------------------------------------
+
+Html Source:-->
+
+	<input id="user1" type="email" class="inputbox" name="username">
+
+
+	Note:--> We can use Sendkeys Command to enter text to editbox.Send keys
+		command also allow dropdown , checkbox and radio button selection..
+
+	Syntax:--->
+		//character sequence
+		driver.findElement(By.id("user1")).clear();
+		driver.findElement(By.id("user1")).SendKeys("UserInput");
+		
+		//Keyboard inputs
+		driver.findElement(By.id("user1")).SendKeys(keys.TAB);
+
+		//characters sequenece and keyboard inputs
+		driver.findElement(By.id("user1")).SendKeys(keys.TAB,"userinput");
+		driver.findElement(By.id("user1")).SendKeys(keys.TAB+"userinput");
+
+
+	Note:--->  1.  sendkeys command usefull to pass <character sequence or 	
+                   			     Keyboard inputs>
+		2. clear command only we use for webeditbox because 	
+		webdriver append text instead of overriding..
+
+	Why clear command is mandatory before sendkeys....?
+
+		* Because sendkeys command allow keyboard inputs.
+		  for keyboard inputs webdriver doesn't throw exception...
+		  =============================================================

@@ -1,0 +1,60 @@
+How to Work with Link?.
+
+	usually link have anchor tag in html source  << a >>,
+	link behaviour it always open new page or new window..
+
+html Source:--->
+
+	 <a  href="http://forgotpassword.com">forgot password?</a>
+
+Example:--> Click above link using  original linkname.
+
+syntax:-->
+	driver.findElement(by.Linktext("forgot password?")).click();
+
+	Note:---> while using linktext follow original name
+		instead of writing partial.
+
+--------------------------****************************------------------------------------------
+Example:--> Click above link using partial name
+syntax:-->
+	driver.findElement(By.partialLinktext("password?")).click();
+	
+	Note:--> When to use partial link text
+		1. When dynamic changes happend at linkname
+		2. When link name is too lengthy......	
+
+	Note:---> while using partialinktext follow partial or original name.
+
+========================================================================
+Example:--> Identify location with linkname.
+
+HtmlSource:-->
+	<a  href="http://newjobs" > Jobs </a>
+	
+	driver.findElement(By.linktext("Jobs")).click();
+	
+============================================================
+Identify location with linkname.
+HtmlSource:-->
+
+	<a  href="http://newjobs.com">
+		<span class="abc"> Jobs </span>
+	</a>
+	
+	driver.findElement(By.linktext("Jobs").click();
+
+============================================================
+Identify linkname with linkname or partial linkname:--->
+HtmlSource:-->
+
+	<a  href="http://newjobs.com">
+		<STRONG> JOB </STRONG>
+		<span class="subject"> opennings </span>
+		<span class="city"> in, HYD </span>
+	</a>
+	
+	
+	driver.findElement(By.partiallinktext("JOB")).click();
+	
+	
