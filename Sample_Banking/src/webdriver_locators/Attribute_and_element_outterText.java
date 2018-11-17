@@ -1,4 +1,4 @@
-package mq.wedriver.Locators;
+package webdriver_locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
