@@ -1,8 +1,6 @@
-/browser_launch/
-/org/
 /selenium_webdriver/
-/webdriver_locators/
-/mq/
-/global_variable/
-/verificationcommands/
+/switch_commands/
 /validationcommands/
+/verificationcommands/
+/webdriver_locators/
+/capturescreen/
